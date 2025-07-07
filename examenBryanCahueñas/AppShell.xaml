@@ -1,6 +1,8 @@
-<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-       xmlns:views="clr-namespace:examenBryanCahueñas.Views"
-       Title="Agenda de Contactos">
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:examenBryanCahueñas.Views"
+    x:Class="examenBryanCahueñas.AppShell">
 
     <TabBar>
         <Tab Title="Crear">
