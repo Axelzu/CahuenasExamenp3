@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:vm="clr-namespace:examenBryanCahueñas.ViewModels"
+             x:Class="examenBryanCahueñas.Views.CrearContactoPage"
+             Title="Bryan Cahueñas - 07/07/2000">
+    <ContentPage.BindingContext>
+        <vm:CrearContactoViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20">
+        <Entry Placeholder="Nombre" Text="{Binding Nombre}" />
+        <Entry Placeholder="Correo" Text="{Binding Correo}" />
+        <Entry Placeholder="Teléfono (+593...)" Text="{Binding Telefono}" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="¿Favorito?" VerticalOptions="Center" />
+            <Switch IsToggled="{Binding Favorito}" />
+        </StackLayout>
+        <Button Text="Guardar" Command="{Binding GuardarCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
