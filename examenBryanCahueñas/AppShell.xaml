@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="examenBryanCahueñas.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:examenBryanCahueñas"
-    Shell.FlyoutBehavior="Disabled"
-    Title="examenBryanCahueñas">
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:views="clr-namespace:examenBryanCahueñas.Views"
+       Title="Agenda de Contactos">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <Tab Title="Crear">
+            <ShellContent ContentTemplate="{DataTemplate views:CrearContactoPage}" />
+        </Tab>
+        <Tab Title="Lista">
+            <ShellContent ContentTemplate="{DataTemplate views:ListaContactosPage}" />
+        </Tab>
+        <Tab Title="Logs">
+            <ShellContent ContentTemplate="{DataTemplate views:LogsPage}" />
+        </Tab>
+    </TabBar>
 </Shell>

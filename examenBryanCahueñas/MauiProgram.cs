@@ -1,25 +1,27 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using examenBryanCahueñas.Services;
+using examenBryanCahueñas.ViewModels;
+using examenBryanCahueñas.Views;
 
-namespace examenBryanCahueñas
+namespace examenBryanCahueñas;
+
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+        var builder = MauiApp.CreateBuilder();
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "contactos.db");
 
-            return builder.Build();
-        }
+        builder.Services.AddSingleton(new ContactoDatabase(dbPath));
+
+        builder.Services.AddSingleton<CrearContactoViewModel>();
+        builder.Services.AddSingleton<ListaContactosViewModel>();
+        builder.Services.AddSingleton<LogsViewModel>();
+
+        builder.Services.AddSingleton<CrearContactoPage>();
+        builder.Services.AddSingleton<ListaContactosPage>();
+        builder.Services.AddSingleton<LogsPage>();
+
+        return builder.Build();
     }
 }

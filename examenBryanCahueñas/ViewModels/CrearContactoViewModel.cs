@@ -2,7 +2,6 @@
 using CommunityToolkit.Mvvm.Input;
 using examenBryanCahueñas.Models;
 using examenBryanCahueñas.Services;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace examenBryanCahueñas.ViewModels;
 
