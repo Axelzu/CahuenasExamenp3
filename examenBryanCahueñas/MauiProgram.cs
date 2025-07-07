@@ -2,6 +2,7 @@
 using examenBryanCahueñas.ViewModels;
 using examenBryanCahueñas.Views;
 
+
 namespace examenBryanCahueñas;
 
 public static class MauiProgram

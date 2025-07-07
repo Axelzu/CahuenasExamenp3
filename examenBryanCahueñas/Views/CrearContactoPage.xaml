@@ -1,10 +1,10 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:vm="clr-namespace:examenBryanCahueñas.ViewModels"
-             x:Class="examenBryanCahueñas.Views.CrearContactoPage"
-             Title="Bryan Cahueñas - 07/07/2000">
-    <ContentPage.BindingContext>
-        <vm:CrearContactoViewModel />
-    </ContentPage.BindingContext>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:examenBryanCahueñas.ViewModels"
+    x:Class="examenBryanCahueñas.Views.CrearContactoPage"
+    Title="Bryan Cahueñas - 07/07/2000">
+
 
     <VerticalStackLayout Padding="20">
         <Entry Placeholder="Nombre" Text="{Binding Nombre}" />
